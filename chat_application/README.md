@@ -6,6 +6,7 @@ A new Flutter project.
 # Claude Code Chat
 
 /init
+
 I'll explore the codebase to understand its structure before creating the CLAUDE.md file.
 
 Bash Find package.json and tsconfig files

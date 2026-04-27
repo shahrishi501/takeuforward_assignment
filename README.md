@@ -5,6 +5,14 @@ A new Flutter project.
 
 # Claude Code Chat
 
+
+https://github.com/user-attachments/assets/7267a2f0-173a-4231-b34e-df27dab8e049
+
+
+
+https://github.com/user-attachments/assets/3963e9b8-f2c1-4f4b-a10b-e67b9ade7ca2
+
+
 /init
 
 I'll explore the codebase to understand its structure before creating the CLAUDE.md file.

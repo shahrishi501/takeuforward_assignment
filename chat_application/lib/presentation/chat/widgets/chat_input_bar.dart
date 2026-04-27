@@ -159,6 +159,7 @@ class _ChatInputBarState extends State<ChatInputBar> {
 
   Future<void> _pickImage(BuildContext context) async {
     final result = await FilePicker.platform.pickFiles(type: FileType.image);
+    if (!mounted) return; // widget may have been disposed during the await
     if (result == null || result.files.isEmpty) return;
 
     final file = result.files.single;
@@ -176,6 +177,7 @@ class _ChatInputBarState extends State<ChatInputBar> {
 
   Future<void> _pickFile(BuildContext context) async {
     final result = await FilePicker.platform.pickFiles(type: FileType.any);
+    if (!mounted) return; // widget may have been disposed during the await
     if (result == null || result.files.isEmpty) return;
 
     final file = result.files.single;

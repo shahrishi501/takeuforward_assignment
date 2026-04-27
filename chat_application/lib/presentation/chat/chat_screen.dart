@@ -72,9 +72,14 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             ChatInputBar(
-              onSendText: (text) => _bloc.add(SendTextMessage(text)),
-              onSendAttachment: (path, name, type) =>
-                  _bloc.add(SendAttachmentMessage(path: path, name: name, type: type)),
+              onSendText: (text) {
+                if (!_bloc.isClosed) _bloc.add(SendTextMessage(text));
+              },
+              onSendAttachment: (path, name, type) {
+                if (!_bloc.isClosed) {
+                  _bloc.add(SendAttachmentMessage(path: path, name: name, type: type));
+                }
+              },
             ),
           ],
         ),
